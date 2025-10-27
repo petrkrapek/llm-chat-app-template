@@ -15,7 +15,7 @@ const MODEL_ID = "@cf/meta/llama-3.3-70b-instruct-fp8-fast";
 
 // Default system prompt
 const SYSTEM_PROMPT =
-  "You are a helpful, friendly assistant. Provide concise and accurate responses.";
+  "Jsi užitečný a přátelský asistent. Poskytuj stručné a přesné odpovědi v češtině.";
 
 export default {
   /**
@@ -41,11 +41,11 @@ export default {
       }
 
       // Method not allowed for other request types
-      return new Response("Method not allowed", { status: 405 });
+      return new Response("Metoda není povolena", { status: 405 });
     }
 
     // Handle 404 for unmatched routes
-    return new Response("Not found", { status: 404 });
+    return new Response("Nenalezeno", { status: 404 });
   },
 } satisfies ExportedHandler<Env>;
 
@@ -89,7 +89,7 @@ async function handleChatRequest(
   } catch (error) {
     console.error("Error processing chat request:", error);
     return new Response(
-      JSON.stringify({ error: "Failed to process request" }),
+      JSON.stringify({ error: "Nepodařilo se zpracovat požadavek" }),
       {
         status: 500,
         headers: { "content-type": "application/json" },

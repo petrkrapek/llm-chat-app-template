@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="cs">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LLM Chat App</title>
+    <title>Chatovací aplikace s AI</title>
     <style>
       :root {
         --primary-color: #f6821f;
@@ -146,29 +146,28 @@
       <div id="chat-messages" class="chat-messages">
         <div class="message assistant-message">
           <p>
-            Hello! I'm an LLM chat app powered by Cloudflare Workers AI. How can
-            I help you today?
+            Ahoj! Jsem chatovací aplikace s umělou inteligencí. Jak vám mohu dnes pomoci?
           </p>
         </div>
       </div>
 
       <div class="typing-indicator" id="typing-indicator">
-        AI is thinking...
+        AI přemýšlí...
       </div>
 
       <div class="message-input">
         <textarea
           id="user-input"
-          placeholder="Type your message here..."
+          placeholder="Napište svou zprávu..."
           rows="1"
           autofocus
         ></textarea>
-        <button id="send-button">Send</button>
+        <button id="send-button">Odeslat</button>
       </div>
     </div>
 
     <footer>
-      <p>Cloudflare Workers AI Chat Template &copy; 2025</p>
+      <p>Šablona chatovací aplikace s AI &copy; 2025</p>
     </footer>
 
     <!-- Chat app script -->
