@@ -15,7 +15,7 @@ let chatHistory = [
   {
     role: "assistant",
     content:
-      "Hello! I'm an LLM chat app powered by Cloudflare Workers AI. How can I help you today?",
+      "Ahoj! Jsem chatovací aplikace s umělou inteligencí. Jak vám mohu dnes pomoci?",
   },
 ];
 let isProcessing = false;
@@ -87,7 +87,7 @@ async function sendMessage() {
 
     // Handle errors
     if (!response.ok) {
-      throw new Error("Failed to get response");
+      throw new Error("Nepodařilo se získat odpověď");
     }
 
     // Process streaming response
@@ -130,7 +130,7 @@ async function sendMessage() {
     console.error("Error:", error);
     addMessageToChat(
       "assistant",
-      "Sorry, there was an error processing your request.",
+      "Omlouváme se, při zpracování vaší žádosti došlo k chybě.",
     );
   } finally {
     // Hide typing indicator
